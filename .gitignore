@@ -1,0 +1,57 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+# Build directories
+/target/
+/build/
+/out/
+
+# Maven
+.mvn/
+mvnw.cmd
+mvnw
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+gradlew
+gradlew.bat
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+
+# IDE - NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
