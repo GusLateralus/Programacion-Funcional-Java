@@ -12,6 +12,16 @@ public class Main
             }
         };
 
+        new Vehiculo(){
+            private int numPasajeros;
+
+            public void manejar()
+            {
+                System.out.println("Estoy manejando");
+            }
+
+        }.manejar();
+
         // Mandamos a llamar al método hacerSonido() desde la instancia perro
         perro.hacerSonido();
 
