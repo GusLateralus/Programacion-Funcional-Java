@@ -13,53 +13,24 @@ package ejercicio2;
 
 public class Main {
 
-    public static void numeroPrimo(boolean resultado)
+    public static void imprimirResultado(String mensajeTrue, String mensajeFalse, boolean resultado)
     {
         if(resultado)
         {
-            System.out.println("El número es primo");
+            System.out.println(mensajeTrue);
         }
-        else{
-            System.out.println("El número no es primo");
-        }
-    }
-
-    public static void numMayor100(boolean resultado)
-    {
-        if(resultado)
-        {
-            System.out.println("El número es mayor a 100");
-        }
-        else{
-            System.out.println("El número no es mayor a 100");
-        }
-    }
-
-    public static void parImpar(boolean resultado)
-    {
-        if(resultado)
-        {
-            System.out.println("El número ingresado es par");
-        }
-        else{
-            System.out.println("El número ingresado es impar");
+        else {
+            System.out.println(mensajeFalse);
         }
 
     }
-
 
     public static void main(String[] args) {
 
         Verificador verificador = new Verificador() {
             @Override
             public boolean probar(int num) {
-                if(num%2==0)
-                {
-                    return true;
-                }
-                else{
-                    return false;
-                }
+                return num % 2 == 0;
             }
         };
 
@@ -77,9 +48,9 @@ public class Main {
             return true;
         };
 
+        imprimirResultado("El número es par", "El número es impar", verificador.probar(4));
+        imprimirResultado("El número es mayor a 100", "El número es menor a 100", verificadorMayor.probar(10));
+        imprimirResultado("El número es primo", "El número es compuesto", verificadorPrimo.probar(4));
 
-        parImpar(verificador.probar(3));
-        numMayor100(verificadorMayor.probar(99));
-        numeroPrimo(verificadorPrimo.probar(2));
     }
 }
