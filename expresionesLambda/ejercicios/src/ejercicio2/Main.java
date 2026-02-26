@@ -34,7 +34,7 @@ public class Main {
             }
         };
 
-        Verificador verificadorMayor = (num) -> (num>100) ? true: false;
+        Verificador verificadorMayor = (num) -> (num>100);
 
         Verificador verificadorPrimo = (num) -> {
 
@@ -48,9 +48,12 @@ public class Main {
             return true;
         };
 
-        imprimirResultado("El número es par", "El número es impar", verificador.probar(4));
-        imprimirResultado("El número es mayor a 100", "El número es menor a 100", verificadorMayor.probar(10));
-        imprimirResultado("El número es primo", "El número es compuesto", verificadorPrimo.probar(4));
+        imprimirResultado("El número es par",
+                "El número es impar", verificador.probar(4));
+        imprimirResultado("El número es mayor a 100",
+                "El número es menor a 100", verificadorMayor.probar(10));
+        imprimirResultado("El número es primo",
+                "El número es compuesto", verificadorPrimo.probar(4));
 
     }
 }
